@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title></title>
 </head>
-<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+<nav class="navbar navbar-expand-md fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">Yahdbasdh</a>
             <div class="collapse navbar-collapse">
@@ -46,10 +46,10 @@
     <div class="map" class="col-md-4">
         <img src="https://media.discordapp.net/attachments/1024827522329882676/1342072919466967061/IMG_5668.png?ex=67b8f70e&is=67b7a58e&hm=0215300f216385e24c375d554c11f3f936e2d09bd1c19ff055b038e19bc7b75a&=&format=webp&quality=lossless&width=1410&height=1060" width="400px">
         <br><br>
-        <div class="base">
-            <p>Base fare:</p>
-            <h2>13.00 Php</h2>
-        </div>
+    </div>
+    <div class="bf">
+        <p>Base fare:</p>
+        <h2>13.00 Php</h2>
     </div>
 </th>
 <th>
@@ -90,16 +90,13 @@
             <option value="12">Taft Avenue</option>
         </select>
             <br>
-        <details ontoggle="pt2()">
-        <summary>Ticket Fare</summary>
-        <p></p>
-        </details>
     </div>
 </th>
 <th>
     <div class="not" class="col-md-4">
        <label for="nooft">Number of tickets:</label>
-        <input type="number" id="tickets" name="tickets" required>
+        <input type="number" id="tt" name="tickets" required>
+        <br>
             <br>
             <button type="button" class="btn btn-warning" onclick="tprice(1)"> Regular </button>
             <br>
@@ -114,14 +111,15 @@
             var bfare = 13;
             var to = document.getElementById("to").value;
             var from = document.getElementById("from").value;
-            var fare = bfare+to;
-            window.alert(to + from + stype + bfare + " Thank you " +  fare + "! Kindly proceed to the next steps.");
+            var nooft = document.getElementById("tt").value;
+            var fare = (Math.round(bfare) + Math.round(from) - Math.round(to)) * stype * nooft;
+            window.alert(" Thank you for your purchase, your total ticket price is: " +  fare.toFixed(2));
             }
     </script>
+</body>
 <footer>
         <br>
     <p>&copy; 2025</p>
     <br>
 </footer>
-</body>
 </html>
