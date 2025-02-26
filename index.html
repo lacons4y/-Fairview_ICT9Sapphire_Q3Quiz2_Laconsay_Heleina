@@ -46,16 +46,16 @@
     <div class="map" class="col-md-4">
         <img src="https://media.discordapp.net/attachments/1024827522329882676/1342072919466967061/IMG_5668.png?ex=67b8f70e&is=67b7a58e&hm=0215300f216385e24c375d554c11f3f936e2d09bd1c19ff055b038e19bc7b75a&=&format=webp&quality=lossless&width=1410&height=1060" width="400px">
         <br><br>
-    </div>
-    <div class="bf">
-        <p>Base fare:</p>
-        <h2>13.00 Php</h2>
+        <div class="bf">
+            <p>Base fare:</p>
+            <h2>13.00 Php</h2>
+        </div>
     </div>
 </th>
 <th>
     <div class="price" class="col-md-4">
         <label>FROM:</label>
-        <select class="form-select" id="to">
+        <select class="form-select" id="from">
             <option value="none">Choose</option>
             <option value="0">North Avenue</option>
             <option value="1">Quezon Avenue</option>
@@ -73,7 +73,7 @@
         </select>
             <br>
         <label>TO:</label>
-        <select class="form-select" id="from">
+        <select class="form-select" id="to">
             <option value="none">Choose</option>
             <option value="0">North Avenue</option>
             <option value="1">Quezon Avenue</option>
@@ -112,7 +112,7 @@
             var to = document.getElementById("to").value;
             var from = document.getElementById("from").value;
             var nooft = document.getElementById("tt").value;
-            var fare = (Math.round(bfare) + Math.round(from) - Math.round(to)) * stype * nooft;
+            var fare = (Math.round(bfare) + Math.round(to) - Math.round(from)) * stype * nooft;
             window.alert(" Thank you for your purchase, your total ticket price is: " +  fare.toFixed(2));
             }
     </script>

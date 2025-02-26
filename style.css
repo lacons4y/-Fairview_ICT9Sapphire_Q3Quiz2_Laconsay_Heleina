@@ -2,11 +2,20 @@ nav{
 	background-color: #7e2929;
 }
 footer{
-
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #7e2929;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
 body{
 	text-align: center;
 }
-bf{
+.bf{
 	background-color: #7e2929;
+	padding: 10px;
+	color: white;
+	border-radius: 15px;
 }
