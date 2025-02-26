@@ -42,101 +42,34 @@
             </nav>
             <br>
             <br><br>
-    <table class="table table-bordered">
-        <tr>
-            <th colspan="8">Metro Rail Transit Line 3 - North ave-Taft ave</th>
-        </tr>
-        <tr>
-            <th style="width:200px"></th>
-            <th style="width:200px">Monday</th>
-            <th style="width:200px">Tuesday</th>
-            <th style="width:200px">Wednesday</th>
-            <th style="width:200px">Thursday</th>
-            <th style="width:200px">Friday</th>
-            <th style="width:200px">Saturday</th>
-            <th style="width:200px">Sunday</th>
-        </tr>
-        <tr>
-            <th>4 AM</th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-primary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-        </tr>
-        <tr>
-            <th>5 AM</th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-        </tr>
-        <tr>
-            <th>12 AM-1:30 PM</th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-        </tr>
-        <tr>
-            <th><br></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-        </tr>
-        <tr>
-            <th>7 PM</th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-primary"></th>
-            <th class="table-secondary"></th>
-        </tr>
-        <tr>
-            <th>8 PM</th>
-            <th class="table-secondary"></th>
-            <th class="table-primary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-primary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-        </tr>
-        <tr>
-            <th>9PM</th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-            <th class="table-secondary"></th>
-        </tr>
-    </table>
-    <table class="table table-bordered">
-        <tr>
-            <th style="width:50%">Open</th>
-            <th class="table-primary" style="width:50%"></th>
-        </tr>
-        <tr>
-            <th style="width:50%">Close</th>
-            <th class="table-secondary" style="width:50%"></th>
-        </tr>
-    </table>
+    <h3>Rate your Experience</h3>
+<div class="form1">
+    <p>We value your feedback. Tell us what you think.</p>
+    <form action="">
+        <label for="rating"></label>
+        <input type="radio" id="1" name="rating" required>
+        <label for="1"></label>
+        <input type="radio" id="2" name="rating" required>
+        <label for="2"></label>
+        <input type="radio" id="3" name="rating" required>
+        <label for="3"></label>
+        <input type="radio" id="4" name="rating" required>
+        <label for="4"></label>
+        <input type="radio" id="5" name="rating" required>
+        <label for="5"></label>
+        <br><br> 
+        <label for="club">Got any suggestions? Tell us!</label>
+        <br><BR>
+        <textarea rows="4" cols="30" placeholder="Type your answer here..."></textarea>
+
+        <br><br>
+        <button type="submit" class="btn btn-warning" onclick="submitf()"> Submit Feedback </button>
+</form>
+<script>
+    function submitf(){
+        window.alert("Submitted! Thank you for your feedback.");
+    }
+</script>
 </body>
 <footer>
         <br>
