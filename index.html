@@ -11,6 +11,16 @@
             width: 100%;
 
         }
+        .not{
+            padding: 40px;
+            text-align: center;
+        }
+        .price{
+            padding: 40px;
+        }
+        .map{
+            padding: 40px;
+        }
     </style>
 </head>
 <nav class="navbar navbar-expand-md fixed-top">
@@ -51,19 +61,21 @@
 <table>
     <tr>
         <th>
+            <center>
     <div class="map" class="col-md-4">
         <img src="https://figures.semanticscholar.org/b928344892954bcf2e820828e12736f14f591fb1/6-Figure3-1.png" width="400px">
         <br><br>
         <div class="bf">
             <p>Base fare:</p>
-            <h2>13.00 Php</h2>
+            <h2>13.00 Php</h2>   
         </div>
     </div>
+</center>
 </th>
 <th>
     <div class="price" class="col-md-4">
-        <label>FROM:</label>
-        <select class="form-select" id="from">
+        <label style="font-size: 30px;">FROM:</label>
+        <select class="form-select" id="from" style="font-size: 22px;">
             <option value="none">Choose</option>
             <option value="0">North Avenue</option>
             <option value="0">Quezon Avenue</option>
@@ -80,8 +92,8 @@
             <option value="15">Taft Avenue</option>
         </select>
             <br>
-        <label>TO:</label>
-        <select class="form-select" id="to">
+        <label style="font-size: 30px;">TO:</label>
+        <select class="form-select" id="to" style="font-size: 22px;">
             <option value="none">Choose</option>
             <option value="0">North Avenue</option>
             <option value="0">Quezon Avenue</option>
@@ -103,6 +115,7 @@
 <th>
     <div class="not" class="col-md-4">
        <label for="nooft">Number of tickets:</label>
+       <br>
         <input type="number" id="tt" name="tickets" required>
         <br>
             <br>

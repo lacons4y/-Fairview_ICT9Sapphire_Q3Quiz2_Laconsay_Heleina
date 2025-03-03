@@ -11,6 +11,7 @@ footer{
     height: 65px;
     color: white;
     text-align: center;
+    padding: ;
 }
 body{
 	text-align: center;
@@ -20,4 +21,9 @@ body{
 	padding: 10px;
 	color: white;
 	border-radius: 15px;
+	width: 350px;
+	margin: 0 auto; 	
+}
+.map{
+	text-align: center;
 }
