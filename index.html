@@ -35,13 +35,13 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="contactinfo.html">Schedules</a>
+                        <a class="nav-link" href="schedule.html">Schedules</a>
                     </li>
                 </ul>
                 <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="schedule.html">Contact</a>
+                        <a class="nav-link" href="contactinfo.html">Contact</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -61,16 +61,15 @@
 <table>
     <tr>
         <th>
-            <center>
     <div class="map" class="col-md-4">
         <img src="https://figures.semanticscholar.org/b928344892954bcf2e820828e12736f14f591fb1/6-Figure3-1.png" width="400px">
         <br><br>
+        Base Fare : 13.00 Php
         <div class="bf">
-            <p>Base fare:</p>
-            <h2>13.00 Php</h2>   
+            <p>Total fare:</p>
+            <h2 id="fare">00.00 Php</h2>   
         </div>
     </div>
-</center>
 </th>
 <th>
     <div class="price" class="col-md-4">
@@ -116,7 +115,7 @@
     <div class="not" class="col-md-4">
        <label for="nooft">Number of tickets:</label>
        <br>
-        <input type="number" id="tt" name="tickets" required>
+        <input type="number" min="1" id="tt" name="tickets" required>
         <br>
             <br>
             <button type="button" class="btn btn-warning" onclick="tprice(1)"> Regular </button>
@@ -134,8 +133,9 @@
             var to = document.getElementById("to").value;
             var from = document.getElementById("from").value;
             var nooft = document.getElementById("tt").value;
-            var fare = (Math.round(bfare) + Math.round(to) - Math.round(from)) * stype * nooft;
-            window.alert(" Thank you for your purchase, your total ticket price is: " +  fare.toFixed(2));
+            var distance = Math.abs(Math.round(to) - Math.round(from));
+            var fare = (Math.round(bfare) + distance) * stype * nooft;
+            document.getElementById("fare").innerHTML = fare.toFixed(2)+" Php";
             }
     </script>
 </body>
