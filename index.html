@@ -8,8 +8,8 @@
     <title>Ticket</title>
     <style>
         .allofthea{
-            width: 100%;
-
+            width: 80%;
+            height: auto;
         }
         .not{
             padding: 40px;
@@ -19,11 +19,38 @@
             padding: 40px;
         }
         .map{
+            padding: 20px;
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+        .bf{
+            background-color: #7e2929;
+            padding: 10px;
+            color: white;
+            border-radius: 15px;
+            width: 350px;
+            margin: 0 auto; 
+        }
+        .map{
+            text-align: center;
+        }
+        .footie{
             padding: 40px;
+        }
+        .guide{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            width: 450px;
+            height: 80%;
         }
     </style>
 </head>
-<nav class="navbar navbar-expand-md fixed-top">
+<body>
+    <nav class="navbar navbar-expand-md fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">Yahdbasdh</a>
             <div class="collapse navbar-collapse">
@@ -53,81 +80,94 @@
                 </div>
                 </div>
             </nav>
-<body>
     <br><br>
     <br><br>
 <center>
-<div class="allofthea">
-<table>
-    <tr>
-        <th>
-    <div class="map" class="col-md-4">
-        <img src="https://figures.semanticscholar.org/b928344892954bcf2e820828e12736f14f591fb1/6-Figure3-1.png" width="400px">
-        <br><br>
-        Base Fare : 13.00 Php
-        <div class="bf">
-            <p>Total fare:</p>
-            <h2 id="fare">00.00 Php</h2>   
+    
+    <div>
+    <table class="allofthea">
+        <div class="guide">
+            <h2 style="font-family: monospace;">Fare Guide</h2>
         </div>
+        <div>
+            <tr>
+                <th>
+            <div class="map" class="col-md-4">
+                <img src="https://figures.semanticscholar.org/b928344892954bcf2e820828e12736f14f591fb1/6-Figure3-1.png" style="width: 65%;">
+                <br><br>
+                Base Fare : 13.00 Php
+                <div class="bf">
+                    <p>Total fare:</p>
+                    <h2 id="fare">00.00 Php</h2>   
+                </div>
+            </div>
+        </th>
+        <th>
+            <div class="price" class="col-md-4">
+                <label style="font-size: 30px;">FROM:</label>
+                <select class="form-select" id="from" style="font-size: 22px;">
+                    <option value="none">Choose</option>
+                    <option value="0">North Avenue</option>
+                    <option value="0">Quezon Avenue</option>
+                    <option value="0">GMA Kamuning</option>
+                    <option value="3">Cubao</option>
+                    <option value="3">Santolan</option>
+                    <option value="7">Ortigas</option>
+                    <option value="7">Shaw Boulevard</option>
+                    <option value="7">Boni Avenue</option>
+                    <option value="11">Guadalupe</option>
+                    <option value="11">Buendia</option>
+                    <option value="11">Ayala</option>
+                    <option value="15">Magallanes</option>
+                    <option value="15">Taft Avenue</option>
+                </select>
+                    <br>
+                <label style="font-size: 30px;">TO:</label>
+                <select class="form-select" id="to" style="font-size: 22px;">
+                    <option value="none">Choose</option>
+                    <option value="0">North Avenue</option>
+                    <option value="0">Quezon Avenue</option>
+                    <option value="0">GMA Kamuning</option>
+                    <option value="3">Cubao</option>
+                    <option value="3">Santolan</option>
+                    <option value="7">Ortigas</option>
+                    <option value="7">Shaw Boulevard</option>
+                    <option value="7">Boni Avenue</option>
+                    <option value="11">Guadalupe</option>
+                    <option value="11">Buendia</option>
+                    <option value="11">Ayala</option>
+                    <option value="15">Magallanes</option>
+                    <option value="15">Taft Avenue</option>
+                </select>
+                    <br>
+            </div>
+        </th>
+        <th>
+            <div class="not" class="col-md-4">
+               <label for="nooft">Number of tickets:</label>
+               <br>
+                <input type="number" min="1" id="tt" name="tickets" required>
+                <br>
+                    <br>
+                    <button type="button" class="btn btn-warning" onclick="tprice(1)"> Regular </button>
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-warning" onclick="tprice(.8)"> Discounted </button>
+            </div>
+        </th>
+        </tr>
+    </table>
     </div>
-</th>
-<th>
-    <div class="price" class="col-md-4">
-        <label style="font-size: 30px;">FROM:</label>
-        <select class="form-select" id="from" style="font-size: 22px;">
-            <option value="none">Choose</option>
-            <option value="0">North Avenue</option>
-            <option value="0">Quezon Avenue</option>
-            <option value="0">GMA Kamuning</option>
-            <option value="3">Cubao</option>
-            <option value="3">Santolan</option>
-            <option value="7">Ortigas</option>
-            <option value="7">Shaw Boulevard</option>
-            <option value="7">Boni Avenue</option>
-            <option value="11">Guadalupe</option>
-            <option value="11">Buendia</option>
-            <option value="11">Ayala</option>
-            <option value="15">Magallanes</option>
-            <option value="15">Taft Avenue</option>
-        </select>
+    <br><br>
+    <div class="footie">
+    <footer>
             <br>
-        <label style="font-size: 30px;">TO:</label>
-        <select class="form-select" id="to" style="font-size: 22px;">
-            <option value="none">Choose</option>
-            <option value="0">North Avenue</option>
-            <option value="0">Quezon Avenue</option>
-            <option value="0">GMA Kamuning</option>
-            <option value="3">Cubao</option>
-            <option value="3">Santolan</option>
-            <option value="7">Ortigas</option>
-            <option value="7">Shaw Boulevard</option>
-            <option value="7">Boni Avenue</option>
-            <option value="11">Guadalupe</option>
-            <option value="11">Buendia</option>
-            <option value="11">Ayala</option>
-            <option value="15">Magallanes</option>
-            <option value="15">Taft Avenue</option>
-        </select>
-            <br>
-    </div>
-</th>
-<th>
-    <div class="not" class="col-md-4">
-       <label for="nooft">Number of tickets:</label>
-       <br>
-        <input type="number" min="1" id="tt" name="tickets" required>
+        <p>&copy; 2025</p>
         <br>
-            <br>
-            <button type="button" class="btn btn-warning" onclick="tprice(1)"> Regular </button>
-            <br>
-            <br>
-            <button type="button" class="btn btn-warning" onclick="tprice(.8)"> Discounted </button>
+    </footer>
     </div>
-</th>
-</tr>
-</table>
-</div>
-    <script>
+</center>
+<script>
         function tprice(stype){
             var bfare = 13;
             var to = document.getElementById("to").value;
@@ -137,11 +177,6 @@
             var fare = (Math.round(bfare) + distance) * stype * nooft;
             document.getElementById("fare").innerHTML = fare.toFixed(2)+" Php";
             }
-    </script>
+</script>
 </body>
-<footer>
-        <br>
-    <p>&copy; 2025</p>
-    <br>
-</footer>
 </html>
