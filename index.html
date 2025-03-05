@@ -27,10 +27,11 @@
             height: auto;
         }
         .bf{
-            background-color: #7e2929;
+            background-color: #B3CDD1;
             padding: 10px;
             color: white;
             border-radius: 15px;
+            border: 3px solid #f5cac3;
             width: 350px;
             margin: 0 auto; 
         }
@@ -41,8 +42,10 @@
             padding: 40px;
         }
         .guide{
-            background-color: black;
+            background-color: #B3CDD1;
             color: white;
+            border-radius: 15px;
+            border: 3px solid #f5cac3;
             padding: 10px;
             width: 450px;
             height: 80%;
@@ -52,28 +55,28 @@
 <body>
     <nav class="navbar navbar-expand-md fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Yahdbasdh</a>
+                <a class="navbar-brand" href="index.html" href="https://imgbb.com/"><img style="width: 70px;" src="https://i.ibb.co/Tp8ZLBJ/F5-CAC3-removebg-preview.png" alt="F5-CAC3-removebg-preview" border="0"></a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html" style="color: white;">Home</a>
                     </li>
                 </ul>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="schedule.html">Schedules</a>
+                        <a style="color: white;" class="nav-link" href="schedule.html">Schedules</a>
                     </li>
                 </ul>
                 <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="contactinfo.html">Contact</a>
+                        <a style="color: white;"class="nav-link" href="contactinfo.html">Contact</a>
                     </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control" type="text" placeholder="Search for...">
-                    <button class="btn btn-primary" type="button">Search</button>
+                    <button class="btn" type="button">Search</button>
                 </form>
                  </div>
                   </div>
@@ -87,15 +90,15 @@
     <div>
     <table class="allofthea">
         <div class="guide">
-            <h2 style="font-family: monospace;">Fare Guide</h2>
+            <h2 style="font-weight: bolder">Fare Guide</h2>
         </div>
         <div>
             <tr>
                 <th>
             <div class="map" class="col-md-4">
-                <img src="https://figures.semanticscholar.org/b928344892954bcf2e820828e12736f14f591fb1/6-Figure3-1.png" style="width: 65%;">
+                <img src="https://figures.semanticscholar.org/b928344892954bcf2e820828e12736f14f591fb1/6-Figure3-1.png" style="width: 75%;">
                 <br><br>
-                Base Fare : 13.00 Php
+                <p style="color: #F28482;">Base Fare : 13.00 Php</p>
                 <div class="bf">
                     <p>Total fare:</p>
                     <h2 id="fare">00.00 Php</h2>   
@@ -104,8 +107,8 @@
         </th>
         <th>
             <div class="price" class="col-md-4">
-                <label style="font-size: 30px;">FROM:</label>
-                <select class="form-select" id="from" style="font-size: 22px;">
+                <label style="font-size: 20px; color: #F28482;">FROM:</label>
+                <select class="form-select" id="from" style="font-size: 15px;">
                     <option value="none">Choose</option>
                     <option value="0">North Avenue</option>
                     <option value="0">Quezon Avenue</option>
@@ -122,8 +125,8 @@
                     <option value="15">Taft Avenue</option>
                 </select>
                     <br>
-                <label style="font-size: 30px;">TO:</label>
-                <select class="form-select" id="to" style="font-size: 22px;">
+                <label style="font-size: 20px; color: #F28482;">TO:</label>
+                <select class="form-select" id="to" style="font-size: 15px;">
                     <option value="none">Choose</option>
                     <option value="0">North Avenue</option>
                     <option value="0">Quezon Avenue</option>
@@ -144,15 +147,15 @@
         </th>
         <th>
             <div class="not" class="col-md-4">
-               <label for="nooft">Number of tickets:</label>
+               <label for="nooft"><p style="color: #F28482;">Number of tickets:</p></label>
                <br>
                 <input type="number" min="1" id="tt" name="tickets" required>
                 <br>
                     <br>
-                    <button type="button" class="btn btn-warning" onclick="tprice(1)"> Regular </button>
+                    <button type="button" class="btn" onclick="tprice(1)"> Regular </button>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-warning" onclick="tprice(.8)"> Discounted </button>
+                    <button type="button" class="btn" onclick="tprice(.8)"> Discounted </button>
             </div>
         </th>
         </tr>
@@ -162,7 +165,7 @@
     <div class="footie">
     <footer>
             <br>
-        <p>&copy; 2025</p>
+        <p> usagiexpress@email.com &copy; 2025</p>
         <br>
     </footer>
     </div>
